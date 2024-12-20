@@ -35,6 +35,9 @@ class User
     #[ORM\ManyToMany(targetEntity: Session::class, inversedBy: 'users')]
     private Collection $sessions;
 
+    #[ORM\Column(length: 255)]
+    private ?string $password = null;
+
     public function __construct()
     {
         $this->programs = new ArrayCollection();
@@ -120,6 +123,18 @@ class User
     public function removeSession(Session $session): static
     {
         $this->sessions->removeElement($session);
+
+        return $this;
+    }
+
+    public function getPassword(): ?string
+    {
+        return $this->password;
+    }
+
+    public function setPassword(string $password): static
+    {
+        $this->password = $password;
 
         return $this;
     }
