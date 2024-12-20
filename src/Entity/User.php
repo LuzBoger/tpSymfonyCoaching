@@ -21,9 +21,6 @@ class User
     #[ORM\Column(length: 255)]
     private ?string $email = null;
 
-    #[ORM\Column]
-    private array $role = [];
-
     public function getId(): ?int
     {
         return $this->id;
@@ -49,18 +46,6 @@ class User
     public function setEmail(string $email): static
     {
         $this->email = $email;
-
-        return $this;
-    }
-
-    public function getRole(): array
-    {
-        return $this->role;
-    }
-
-    public function setRole(array $role): static
-    {
-        $this->role = $role;
 
         return $this;
     }
