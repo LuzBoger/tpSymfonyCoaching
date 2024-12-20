@@ -21,7 +21,7 @@ class User
     #[ORM\Column(length: 255)]
     private ?string $email = null;
 
-    #[ORM\Column(type: Types::ARRAY)]
+    #[ORM\Column]
     private array $role = [];
 
     public function getId(): ?int
