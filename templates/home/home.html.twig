@@ -1,0 +1,47 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Bienvenue sur Mon Application{% endblock %}
+
+{% block body %}
+    <div class="bg-gray-100 min-h-screen flex flex-col">
+        <!-- Hero Section -->
+        <div class="bg-blue-600 text-white py-20">
+            <div class="container mx-auto px-4 text-center">
+                <h1 class="text-4xl font-bold mb-4">Bienvenue sur Coaching Monitor</h1>
+                <p class="text-lg">Explorez nos fonctionnalités et découvrez tout ce que nous avons à offrir.</p>
+                <a href="/explore" class="mt-6 inline-block px-6 py-3 bg-white text-blue-600 font-medium rounded-lg shadow-md hover:bg-gray-100">
+                    Commencez maintenant
+                </a>
+            </div>
+        </div>
+
+        <!-- Features Section -->
+        <div class="container mx-auto px-4 py-10">
+            <h2 class="text-2xl font-bold text-gray-800 mb-6 text-center">Nos Fonctionnalités</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="p-6 bg-white rounded-lg shadow-lg text-center">
+                    <h3 class="text-lg font-bold text-gray-700">Suivi des séances</h3>
+                    <p class="text-gray-600 mt-2">Accédez à des séances personnalisées adaptées à vos besoins, avec un suivi en temps réel pour maximiser vos progrès.</p>
+                </div>
+                <div class="p-6 bg-white rounded-lg shadow-lg text-center">
+                    <h3 class="text-lg font-bold text-gray-700">Des coachs professionnels</h3>
+                    <p class="text-gray-600 mt-2">Bénéficiez de l'expertise de nos coachs certifiés, disponibles pour vous accompagner à chaque étape de votre parcours.</p>
+                </div>
+                <div class="p-6 bg-white rounded-lg shadow-lg text-center">
+                    <h3 class="text-lg font-bold text-gray-700">Programmes personnalisés</h3>
+                    <p class="text-gray-600 mt-2">Profitez de retours et d'analyses détaillés par nos experts pour ajuster et optimiser votre programme selon votre niveau.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Call to Action -->
+        <div class="bg-gray-200 py-10">
+            <div class="container mx-auto px-4 text-center">
+                <h2 class="text-2xl font-bold text-gray-800">Prêt à découvrir plus ?</h2>
+                <a href="/register" class="mt-4 inline-block px-6 py-3 bg-blue-600 text-white font-medium rounded-lg shadow-md hover:bg-blue-700">
+                    Rejoignez-nous
+                </a>
+            </div>
+        </div>
+    </div>
+{% endblock %}
